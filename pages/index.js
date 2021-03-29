@@ -6,7 +6,12 @@ export default function Home({ name, title }) {
 		<div>
 			<h1>{name}</h1>
 			<h3>{title}</h3>
-			<Image src="/beach.svg" width={350} height={350} layout="responsive" />
+			<Image
+				alt="Beach sunset with palm trees"
+				src="/beach.svg"
+				width={350}
+				height={350}
+			/>
 		</div>
 	)
 }
