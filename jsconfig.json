@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"module": "commonJS",
+		"paths": {
+			"@components": ["components"],
+			"@components/*": ["components/*"]
+		}
+	},
+	"exclude": ["node_modules", ".vscode", ".next"]
+}
