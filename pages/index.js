@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
+import Image from 'next/image'
 
 export default function Home({ name, title }) {
-	console.log('name', name)
-	console.log('title', title)
 	return (
 		<div>
-			Home Page Content
+			<h1>{name}</h1>
+			<h3>{title}</h3>
+			<Image src="/beach.svg" width={350} height={350} layout="responsive" />
 		</div>
 	)
 }
