@@ -5,9 +5,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-	"dev": "next dev",
+	"dev": "NODE_ENV=development next dev",
 	"build": "next build",
-	"start": "next start"
+	"start": "NODE_ENV=production next start"
   },
   "dependencies": {
     "next": "^10.1.1",
