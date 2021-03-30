@@ -1,32 +1,30 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'styled-components'
-import useDarkMode from 'use-dark-mode'
+import { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { Nav, Header } from '@components'
 import { darkMode, lightMode } from '@themes'
 
+const GlobalStyle = createGlobalStyle`
+	body {
+		margin: 0;
+		padding: 0;
+	}
+`
+
 export default function App({ Component, pageProps }) {
-	const [isMounted, setIsMounted] = useState(false)
-	const { value: isDarkMode } = useDarkMode()
+	const [isDarkMode, setIsDarkMode] = useState(true)
 	const activeTheme = isDarkMode ? darkMode : lightMode
 
-	useEffect(() => {
-		setIsMounted(true)
-	}, [])
-
 	const body = (
-		<ThemeProvider theme={activeTheme}>
-			<Header />
-			<Component {...pageProps} />
-			<Nav />
-		</ThemeProvider>
+		<>
+			<GlobalStyle />
+			<ThemeProvider theme={activeTheme}>
+				<Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+				<Component {...pageProps} />
+				<Nav />
+			</ThemeProvider>
+		</>
 	)
-
-	if (!isMounted) {
-		<div style={{ visibility: 'hidden' }}>
-			{body}
-		</div>
-	}
 
 	return (
 		<>
