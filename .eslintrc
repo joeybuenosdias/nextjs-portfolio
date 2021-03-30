@@ -38,7 +38,8 @@
         "import/resolver": {
             "alias": {
                 "map": [
-                    ["@components", "./components"]
+                    ["@components", "./components"],
+					["@themes", "./themes"]
                 ],
                 "extensions": [".ts", ".js", ".jsx", ".json"]
             }

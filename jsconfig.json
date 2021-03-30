@@ -4,7 +4,9 @@
 		"module": "commonJS",
 		"paths": {
 			"@components": ["components"],
-			"@components/*": ["components/*"]
+			"@components/*": ["components/*"],
+			"@themes": ["themes"],
+			"@themes/*": ["themes/*"]
 		}
 	},
 	"exclude": ["node_modules", ".vscode", ".next"]
