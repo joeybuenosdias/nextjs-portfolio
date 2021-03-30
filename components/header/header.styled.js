@@ -5,5 +5,7 @@ export const StyledButton = styled.button`
 `
 
 export const StyledHeader = styled.div`
-	border: none;
+	display: flex;
+	justify-content: flex-end;
+	padding: 32px;
 `

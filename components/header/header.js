@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
-import { StyledButton } from './header.styled'
+import { Toggle } from 'react-toggle-component'
+import { StyledHeader } from './header.styled'
 
 export default function Header({
 	setIsDarkMode,
@@ -10,9 +11,16 @@ export default function Header({
 	}
 
 	return (
-		<div>
-			<StyledButton onClick={handleToggle} type="button">Toggle Theme</StyledButton>
-		</div>
+		<StyledHeader>
+			<Toggle
+				name="theme-toggle"
+				knobColor={isDarkMode ? '#333333' : '#fff'}
+				onToggle={handleToggle}
+				checked={isDarkMode}
+				backgroundColor="#0BD3D3"
+				borderColor="#0BD3D3"
+			/>
+		</StyledHeader>
 	)
 }
 
