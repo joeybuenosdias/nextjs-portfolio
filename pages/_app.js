@@ -5,6 +5,12 @@ import { Nav, Header } from '@components'
 import { darkMode, lightMode } from '@themes'
 
 const GlobalStyle = createGlobalStyle`
+
+	:root {
+		--bg-dark: #333333;
+		--bg-light: #ffffff;
+	}
+
 	body {
 		margin: 0;
 		padding: 0;

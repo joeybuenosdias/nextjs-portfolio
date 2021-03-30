@@ -1,5 +1,5 @@
 export const dark = {
-	backgroundColor: 'blue',
+	backgroundColor: 'var(--bg-dark)',
 	color: 'yellow',
 }
 
