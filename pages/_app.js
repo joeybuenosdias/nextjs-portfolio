@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import { ThemeProvider, createGlobalStyle } from 'styled-components'
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
 import { Nav, Header } from '@components'
 import { darkMode, lightMode } from '@themes'
 
@@ -8,7 +8,15 @@ const GlobalStyle = createGlobalStyle`
 	body {
 		margin: 0;
 		padding: 0;
+		box-sizing: border-box;
+		width: 100vw;
+		height: 100vh;
 	}
+`
+
+const StyledLayout = styled.div`
+	background-color: ${({ theme }) => theme.backgroundColor};
+	height: 100vh;
 `
 
 export default function App({ Component, pageProps }) {
@@ -19,9 +27,11 @@ export default function App({ Component, pageProps }) {
 		<>
 			<GlobalStyle />
 			<ThemeProvider theme={activeTheme}>
-				<Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-				<Component {...pageProps} />
-				<Nav />
+				<StyledLayout>
+					<Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+					<Component {...pageProps} />
+					<Nav />
+				</StyledLayout>
 			</ThemeProvider>
 		</>
 	)
