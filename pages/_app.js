@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
+import Head from 'next/head'
 import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { GoogleFonts } from 'next-google-fonts'
 import { Nav, Header } from '@components'
 import { darkMode, lightMode } from '@themes'
 
@@ -18,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 		width: 100vw;
 		height: 100vh;
+		font-family: 'Nunito', sans-serif;
 	}
 `
 
@@ -32,6 +35,10 @@ export default function App({ Component, pageProps }) {
 
 	const body = (
 		<>
+			<GoogleFonts href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" />
+			<Head>
+				<title>Joey Schrader Dev</title>
+			</Head>
 			<GlobalStyle />
 			<ThemeProvider theme={activeTheme}>
 				<StyledLayout>
