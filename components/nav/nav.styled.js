@@ -3,8 +3,6 @@ import styled from 'styled-components'
 export const StyledNavContainer = styled.div`
 	background: ${({ theme }) => theme.gradient};
 	padding: 3px;
-	position: fixed;
-	bottom: 0;
 	width: 100%;
 	box-sizing: border-box;
 `

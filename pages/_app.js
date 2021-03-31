@@ -39,7 +39,13 @@ const GlobalStyle = createGlobalStyle`
 const StyledLayout = styled.div`
 	background-color: ${({ theme }) => theme.backgroundColor};
 	height: 100vh;
-	padding-bottom: 140px;
+	display: flex;
+	flex-direction: column;
+`
+
+const StyledPageContent = styled.div`
+	flex-grow: 1;
+	overflow: scroll;
 `
 
 export default function App({ Component, pageProps }) {
@@ -56,7 +62,9 @@ export default function App({ Component, pageProps }) {
 			<ThemeProvider theme={activeTheme}>
 				<StyledLayout>
 					<Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-					<Component {...pageProps} />
+					<StyledPageContent>
+						<Component {...pageProps} />
+					</StyledPageContent>
 					<Nav />
 				</StyledLayout>
 			</ThemeProvider>
