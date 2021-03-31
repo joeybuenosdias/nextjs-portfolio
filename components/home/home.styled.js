@@ -7,13 +7,13 @@ export const Container = styled.div`
 `
 
 export const StyledName = styled.h1`
-	background: -webkit-linear-gradient(#0BD3D3, #F890E7);
+	background: ${({ theme }) => theme.gradient};
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 `
 
 export const StyledTitle = styled.h3`
-	background: -webkit-linear-gradient(#0BD3D3, #F890E7);
+	background: ${({ theme }) => theme.gradient};
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	margin: 0 0 48px 0;

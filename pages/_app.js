@@ -11,7 +11,8 @@ const GlobalStyle = createGlobalStyle`
 	:root {
 		--bg-dark: #333333;
 		--bg-light: #ffffff;
-		--primary-gradient: linear-gradient(#0BD3D3, #F890E7);
+		--dark-gradient: -webkit-linear-gradient(#0BD3D3, #DE81CE);
+		--light-gradient: -webkit-linear-gradient(#0BD3D3, #78466F);
 	}
 
 	body {
