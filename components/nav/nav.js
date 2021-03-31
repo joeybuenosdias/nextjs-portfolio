@@ -19,7 +19,7 @@ export default function Nav() {
 	return (
 		<nav>
 			{navData.map((navLink) => (
-				<Link href={navLink.href}>
+				<Link key={navLink.name} href={navLink.href}>
 					{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 					<a>{navLink.name}</a>
 				</Link>
