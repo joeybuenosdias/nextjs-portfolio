@@ -1,21 +1,26 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { StyledLink, StyledNav, StyledNavContainer } from './nav.styled'
+import {
+	StyledLink,
+	StyledNav,
+	StyledNavContainer,
+	StyledText,
+} from './nav.styled'
 
 const navData = [
 	{
 		href: '/',
-		name: 'Home',
+		name: 'HOME',
 		svgPath: '/home.svg',
 	},
 	{
 		href: '/resume',
-		name: 'Resume',
+		name: 'RESUME',
 		svgPath: '/file.svg',
 	},
 	{
 		href: '/contact',
-		name: 'Contact',
+		name: 'CONTACT',
 		svgPath: '/contact.svg',
 	},
 ]
@@ -30,11 +35,11 @@ export default function Nav() {
 						<StyledLink>
 							<Image
 								alt={`${navLink.name}`}
-								height={24}
-								width={24}
+								height={36}
+								width={36}
 								src={navLink.svgPath}
 							/>
-							<div>{navLink.name}</div>
+							<StyledText>{navLink.name}</StyledText>
 						</StyledLink>
 					</Link>
 				))}

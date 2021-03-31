@@ -13,8 +13,8 @@ HomePage.propTypes = {
 }
 
 export async function getServerSideProps() {
-	const name = 'Joey Schrader'
-	const title = 'Front End Engineer'
+	const name = 'JOEY SCHRADER'
+	const title = 'FRONT END ENGINEER'
 
 	return {
 		props: {
