@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 	:root {
 		--bg-dark: #333333;
 		--bg-light: #ffffff;
+		--primary-gradient: linear-gradient(#0BD3D3, #F890E7);
 	}
 
 	body {

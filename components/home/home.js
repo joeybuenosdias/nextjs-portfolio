@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
-import { StyledName } from './home.styled'
+import { StyledName, StyledTitle, Container } from './home.styled'
 
 export default function Home({ name, title }) {
 	return (
-		<div>
+		<Container>
 			<StyledName>{name}</StyledName>
-			<h3>{title}</h3>
+			<StyledTitle>{title}</StyledTitle>
 			<Image
 				alt="Beach sunset with palm trees"
 				src="/beach.svg"
 				width={350}
 				height={350}
 			/>
-		</div>
+		</Container>
 	)
 }
 
