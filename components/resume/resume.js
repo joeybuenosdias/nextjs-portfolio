@@ -7,6 +7,7 @@ import {
 	StyledSkillsRow,
 	StyledSkillsCell,
 	StyledJobHeading,
+	StyledJobContainer,
 	StyledJobDetail,
 } from './resume.styled'
 
@@ -138,6 +139,18 @@ const experienceData = [
 			'Create detailed documentation for backend services utilized by product page.',
 		],
 	},
+	{
+		employer: 'DevPoint Labs',
+		jobTitle: 'Front End Developer',
+		startDate: 'September 2017',
+		endDate: 'June 2018',
+		details: [
+			'Create new UI features for DevPoint Studio’s clients utilizing React/Redux.',
+			'Mentor incoming Developers participating in the DevPoint Labs Coding Bootcamp.',
+			'OddJobb, owned the ‘Services’ page using React & Redux.',
+			'EventTech, an Eventbrite clone built with Nodejs, Express, React & Redux.',
+		],
+	},
 ]
 
 function Experience() {
@@ -158,7 +171,7 @@ function Job({
 	details,
 }) {
 	return (
-		<div>
+		<StyledJobContainer>
 			<div>
 				<StyledJobHeading>{employer}</StyledJobHeading>
 				<StyledJobHeading>{jobTitle}</StyledJobHeading>
@@ -179,7 +192,7 @@ function Job({
 					<StyledJobDetail>{detail}</StyledJobDetail>
 				))}
 			</ul>
-		</div>
+		</StyledJobContainer>
 	)
 }
 

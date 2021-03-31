@@ -36,6 +36,16 @@ export const StyledSkillsCell = styled.div`
 	padding: 8px 0;
 `
 
+export const StyledJobContainer = styled.div`
+	padding-bottom: 1.5em;
+	border-bottom: 1px solid ${({ theme }) => theme.fontColor};
+	margin-bottom: 2em;
+
+	&:last-child {
+		border-bottom: none;
+	}
+`
+
 export const StyledJobHeading = styled.h3`
 	margin: 0;
 `
