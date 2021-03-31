@@ -142,7 +142,7 @@ function Experience() {
 	return (
 		<Section title="EXPERIENCE">
 			{experienceData.map((job) => (
-				<Job {...job} />
+				<Job key={job.employer} {...job} />
 			))}
 		</Section>
 	)
@@ -179,4 +179,12 @@ function Job({
 			</ul>
 		</div>
 	)
+}
+
+Job.propTypes = {
+	employer: PropTypes.string.isRequired,
+	jobTitle: PropTypes.string.isRequired,
+	startDate: PropTypes.string.isRequired,
+	endDate: PropTypes.string.isRequired,
+	details: PropTypes.array.isRequired,
 }
