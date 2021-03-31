@@ -5,6 +5,7 @@ export const StyledResumeContainer = styled.div`
 	padding: 3px;
 	width: 100%;
 	box-sizing: border-box;
+	padding-bottom: 140px;
 `
 
 export const StyledResume = styled.nav`
