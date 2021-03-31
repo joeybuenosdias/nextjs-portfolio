@@ -49,7 +49,7 @@ export default function Contact() {
 	return (
 		<ContactContainer>
 			{contactData.map((contact) => (
-				<Link href={contact.link}>
+				<Link key={contact.name} href={contact.link}>
 					<ContactItem>
 						<Image
 							alt={contact.name}

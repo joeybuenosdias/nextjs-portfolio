@@ -4,6 +4,10 @@ module.exports = {
 		'**/*.{js,jsx}',
 		'!**/node_modules/**',
 		'!**/.next/**',
+		'!**/coverage/**',
+		'!**/pages/**',
+		'!**/themes/**',
+		'!./*.js',
 	],
 	setupFilesAfterEnv: ['./jest.setup.js'],
 	moduleNameMapper: {
