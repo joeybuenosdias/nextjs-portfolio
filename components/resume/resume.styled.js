@@ -16,3 +16,21 @@ export const StyledSection = styled.section`
 	background-color: ${({ theme }) => theme.backgroundColor};
 	color: ${({ theme }) => theme.fontColor};
 `
+
+export const StyledSkillContainer = styled.div`
+	border: 0.5px solid ${({ theme }) => theme.fontColor};
+`
+
+export const StyledSkillRow = styled.div`
+	display: flex;
+`
+
+export const StyledSkillCell = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	border: 0.5px solid ${({ theme }) => theme.fontColor};
+	font-size: var(--font-size-sm);
+	padding: 8px 0;
+`

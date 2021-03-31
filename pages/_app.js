@@ -16,6 +16,12 @@ const GlobalStyle = createGlobalStyle`
 		--light-bg: #F2F2F2;
 		--light-font-color: #4F4F4F;
 		--light-gradient: -webkit-linear-gradient(#0BD3D3, #78466F);
+
+		--font-size-xs: 10px;
+		--font-size-sm: 12px;
+		--font-size-md: 14px;
+		--font-size-lg: 16px;
+		--font-size-xl: 18px;
 	}
 
 	body {
@@ -33,6 +39,7 @@ const GlobalStyle = createGlobalStyle`
 const StyledLayout = styled.div`
 	background-color: ${({ theme }) => theme.backgroundColor};
 	height: 100vh;
+	padding-bottom: 140px;
 `
 
 export default function App({ Component, pageProps }) {
