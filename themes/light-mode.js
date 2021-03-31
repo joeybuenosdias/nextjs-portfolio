@@ -1,7 +1,7 @@
 export const light = {
-	backgroundColor: 'var(--bg-light)',
+	backgroundColor: 'var(--light-bg)',
 	gradient: 'var(--light-gradient)',
-	color: 'blue',
+	fontColor: 'var(--light-font-color)',
 }
 
 export default light

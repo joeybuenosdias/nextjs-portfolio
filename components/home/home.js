@@ -10,8 +10,8 @@ export default function Home({ name, title }) {
 			<Image
 				alt="Beach sunset with palm trees"
 				src="/beach.svg"
-				width={350}
-				height={350}
+				width={320}
+				height={320}
 			/>
 		</Container>
 	)
