@@ -18,15 +18,15 @@ export const StyledSection = styled.section`
 	color: ${({ theme }) => theme.fontColor};
 `
 
-export const StyledSkillContainer = styled.div`
+export const StyledSkillsContainer = styled.div`
 	border: 0.5px solid ${({ theme }) => theme.fontColor};
 `
 
-export const StyledSkillRow = styled.div`
+export const StyledSkillsRow = styled.div`
 	display: flex;
 `
 
-export const StyledSkillCell = styled.div`
+export const StyledSkillsCell = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -34,4 +34,12 @@ export const StyledSkillCell = styled.div`
 	border: 0.5px solid ${({ theme }) => theme.fontColor};
 	font-size: var(--font-size-sm);
 	padding: 8px 0;
+`
+
+export const StyledJobHeading = styled.h3`
+	margin: 0;
+`
+
+export const StyledJobDetail = styled.li`
+	margin: 20px 0;
 `

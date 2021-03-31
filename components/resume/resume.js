@@ -3,9 +3,11 @@ import {
 	StyledResumeContainer,
 	StyledResume,
 	StyledSection,
-	StyledSkillContainer,
-	StyledSkillRow,
-	StyledSkillCell,
+	StyledSkillsContainer,
+	StyledSkillsRow,
+	StyledSkillsCell,
+	StyledJobHeading,
+	StyledJobDetail,
 } from './resume.styled'
 
 export default function Resume() {
@@ -98,15 +100,15 @@ const skillsData = [
 function Skills() {
 	return (
 		<Section title="SKILLS">
-			<StyledSkillContainer>
+			<StyledSkillsContainer>
 				{skillsData.map((row) => (
-					<StyledSkillRow>
+					<StyledSkillsRow>
 						{row.map((cell) => (
-							<StyledSkillCell>{cell.name}</StyledSkillCell>
+							<StyledSkillsCell>{cell.name}</StyledSkillsCell>
 						))}
-					</StyledSkillRow>
+					</StyledSkillsRow>
 				))}
-			</StyledSkillContainer>
+			</StyledSkillsContainer>
 		</Section>
 	)
 }
@@ -158,8 +160,8 @@ function Job({
 	return (
 		<div>
 			<div>
-				<h3>{employer}</h3>
-				<h3>{jobTitle}</h3>
+				<StyledJobHeading>{employer}</StyledJobHeading>
+				<StyledJobHeading>{jobTitle}</StyledJobHeading>
 				<div>
 					<span>
 						{startDate}
@@ -174,7 +176,7 @@ function Job({
 			</div>
 			<ul>
 				{details.map((detail) => (
-					<li>{detail}</li>
+					<StyledJobDetail>{detail}</StyledJobDetail>
 				))}
 			</ul>
 		</div>
