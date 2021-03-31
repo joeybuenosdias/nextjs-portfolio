@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 		--bg-dark: #333333;
 		--bg-light: #ffffff;
 		--dark-gradient: -webkit-linear-gradient(#0BD3D3, #DE81CE);
-		--light-gradient: -webkit-linear-gradient(#0BD3D3, #78466F);
+		--light-gradient: -webkit-linear-gradient(#0BD3D3, #DE81CE);
 	}
 
 	body {
