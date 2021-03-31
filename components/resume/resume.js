@@ -105,9 +105,9 @@ function Skills() {
 		<Section title="SKILLS">
 			<StyledSkillsContainer>
 				{skillsData.map((row) => (
-					<StyledSkillsRow>
+					<StyledSkillsRow key={`${row[0].name} - ${row[1].name} - ${row[2].name} row`}>
 						{row.map((cell) => (
-							<StyledSkillsCell>{cell.name}</StyledSkillsCell>
+							<StyledSkillsCell key={`${cell.name} cell`}>{cell.name}</StyledSkillsCell>
 						))}
 					</StyledSkillsRow>
 				))}
@@ -182,7 +182,7 @@ function Job({
 			/>
 			<ul>
 				{details.map((detail) => (
-					<StyledJobDetail>{detail}</StyledJobDetail>
+					<StyledJobDetail key={detail}>{detail}</StyledJobDetail>
 				))}
 			</ul>
 		</StyledJobContainer>
@@ -240,7 +240,7 @@ function Education() {
 		<Section title="EDUCATION">
 			<div>
 				{educationData.map((item) => (
-					<StyledEducationItem>
+					<StyledEducationItem key={item.schoolName}>
 						<StyledHeading>{item.schoolName}</StyledHeading>
 						<StyledHeading>{item.achievement}</StyledHeading>
 						<div>{item.graduationDate}</div>
