@@ -6,9 +6,10 @@ import {
 	StyledSkillsContainer,
 	StyledSkillsRow,
 	StyledSkillsCell,
-	StyledJobHeading,
+	StyledHeading,
 	StyledJobContainer,
 	StyledJobDetail,
+	StyledEducationItem,
 } from './resume.styled'
 
 export default function Resume() {
@@ -18,6 +19,7 @@ export default function Resume() {
 				<Summary />
 				<Skills />
 				<Experience />
+				<Education />
 			</StyledResume>
 		</StyledResumeContainer>
 	)
@@ -170,23 +172,14 @@ function Job({
 	endDate,
 	details,
 }) {
+	const dateDisplay = `${startDate} - ${endDate}`
 	return (
 		<StyledJobContainer>
-			<div>
-				<StyledJobHeading>{employer}</StyledJobHeading>
-				<StyledJobHeading>{jobTitle}</StyledJobHeading>
-				<div>
-					<span>
-						{startDate}
-						&nbsp;
-					</span>
-					-
-					<span>
-						&nbsp;
-						{endDate}
-					</span>
-				</div>
-			</div>
+			<HeadInfo
+				primaryInfo={employer}
+				secondaryInfo={jobTitle}
+				tertiaryInfo={dateDisplay}
+			/>
 			<ul>
 				{details.map((detail) => (
 					<StyledJobDetail>{detail}</StyledJobDetail>
@@ -202,4 +195,58 @@ Job.propTypes = {
 	startDate: PropTypes.string.isRequired,
 	endDate: PropTypes.string.isRequired,
 	details: PropTypes.array.isRequired,
+}
+
+function HeadInfo({
+	primaryInfo,
+	secondaryInfo,
+	tertiaryInfo,
+}) {
+	return (
+		<div>
+			<StyledHeading>{primaryInfo}</StyledHeading>
+			<StyledHeading>{secondaryInfo}</StyledHeading>
+			<div>{tertiaryInfo}</div>
+		</div>
+	)
+}
+
+HeadInfo.propTypes = {
+	primaryInfo: PropTypes.string.isRequired,
+	secondaryInfo: PropTypes.string.isRequired,
+	tertiaryInfo: PropTypes.string.isRequired,
+}
+
+const educationData = [
+	{
+		schoolName: 'DevPoint Labs',
+		achievement: 'Web Development Certification',
+		graduationDate: 'August 2017',
+	},
+	{
+		schoolName: 'Utah State University',
+		achievement: 'Bachelor of Science - Marketing',
+		graduationDate: 'May 2010',
+	},
+	{
+		schoolName: 'Snow College',
+		achievement: 'General Coursework',
+		graduationDate: 'December 2008',
+	},
+]
+
+function Education() {
+	return (
+		<Section title="EDUCATION">
+			<div>
+				{educationData.map((item) => (
+					<StyledEducationItem>
+						<StyledHeading>{item.schoolName}</StyledHeading>
+						<StyledHeading>{item.achievement}</StyledHeading>
+						<div>{item.graduationDate}</div>
+					</StyledEducationItem>
+				))}
+			</div>
+		</Section>
+	)
 }

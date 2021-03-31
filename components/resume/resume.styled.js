@@ -42,14 +42,24 @@ export const StyledJobContainer = styled.div`
 	margin-bottom: 2em;
 
 	&:last-child {
+		padding-bottom: 0;
 		border-bottom: none;
+		margin-bottom: 0;
 	}
 `
 
-export const StyledJobHeading = styled.h3`
+export const StyledHeading = styled.h3`
 	margin: 0;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
 `
 
 export const StyledJobDetail = styled.li`
 	margin: 20px 0;
+`
+
+export const StyledEducationItem = styled.div`
+	margin: 0 0 32px 0;
 `
