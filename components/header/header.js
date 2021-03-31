@@ -19,6 +19,7 @@ export default function Header({
 				checked={isDarkMode}
 				backgroundColor="#0BD3D3"
 				borderColor="#0BD3D3"
+				data-testid="toggle"
 			/>
 		</StyledHeader>
 	)
