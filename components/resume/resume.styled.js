@@ -1,10 +1,18 @@
 import styled from 'styled-components'
 
-export const StyledSection = styled.section`
-	padding: 16px;
-	background-color: blue;
+export const StyledResumeContainer = styled.div`
+	background: ${({ theme }) => theme.gradient};
+	padding: 3px;
+	width: 100%;
+	box-sizing: border-box;
 `
 
-export const StyledTitle = styled.h2`
-	background-color: yellow;
+export const StyledResume = styled.nav`
+	background: ${({ theme }) => theme.backgroundColor};
+`
+
+export const StyledSection = styled.section`
+	padding: 16px;
+	background-color: ${({ theme }) => theme.backgroundColor};
+	color: ${({ theme }) => theme.fontColor};
 `

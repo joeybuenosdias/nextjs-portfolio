@@ -9,9 +9,12 @@ import { darkMode, lightMode } from '@themes'
 const GlobalStyle = createGlobalStyle`
 
 	:root {
-		--bg-dark: #333333;
-		--bg-light: #ffffff;
+		--dark-bg: #333333;
+		--dark-font-color: #F2F2F2;
 		--dark-gradient: -webkit-linear-gradient(#0BD3D3, #DE81CE);
+
+		--light-bg: #F2F2F2;
+		--light-font-color: #4F4F4F;
 		--light-gradient: -webkit-linear-gradient(#0BD3D3, #78466F);
 	}
 
@@ -22,6 +25,8 @@ const GlobalStyle = createGlobalStyle`
 		width: 100vw;
 		height: 100vh;
 		font-family: 'Nunito', sans-serif;
+		letter-spacing: 2px;
+		line-height: 1.75em;
 	}
 `
 
