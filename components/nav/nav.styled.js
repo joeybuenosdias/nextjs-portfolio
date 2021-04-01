@@ -11,12 +11,18 @@ export const StyledNav = styled.nav`
 	display: flex;
 	justify-content: space-around;
 	background: ${({ theme }) => theme.backgroundColor};
-	padding: 1.5em 0;
+	padding: 1em 0;
 `
 
 export const StyledLink = styled.a`
 	text-decoration: none;
 	text-align: center;
+	padding: 16px;
+	
+	&:hover {
+		cursor: pointer;
+		background-color: ${({ theme }) => theme.hoverColor};
+	}
 `
 
 export const StyledText = styled.div`

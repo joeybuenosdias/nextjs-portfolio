@@ -11,7 +11,12 @@ export const ContactContainer = styled.div`
 export const ContactItem = styled.div`
 	display: flex;
 	align-items: center;
-	width: 100%;
+	padding: 0 1em;
+
+	&:hover {
+		background-color: ${({ theme }) => theme.hoverColor};
+		cursor: pointer;
+	}
 `
 
 export const ContactTitle = styled.h4`
