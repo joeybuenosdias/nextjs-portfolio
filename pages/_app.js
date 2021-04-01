@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
 		--light-bg: #F2F2F2;
 		--light-font-color: #4F4F4F;
+		--light-hover-color: #E0E0E0;
 		--light-gradient: -webkit-linear-gradient(#0BD3D3, #78466F);
 
 		--font-size-xs: 10px;
