@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
-		margin: 0;
+		margin: 0 auto;
 		padding: 0;
 		box-sizing: border-box;
 		width: 100vw;
@@ -33,6 +33,8 @@ const GlobalStyle = createGlobalStyle`
 		font-family: 'Nunito', sans-serif;
 		letter-spacing: 2px;
 		line-height: 1.75em;
+		background-color: ${({ theme }) => theme.backgroundColor};
+		max-width: 1000px;
 	}
 `
 
@@ -64,8 +66,8 @@ export default function App({ Component, pageProps }) {
 				<link rel="icon" href="/beach192.png" sizes="192x192" />
 				<link rel="icon" href="/beach512.png" sizes="512x512" />
 			</Head>
-			<GlobalStyle />
 			<ThemeProvider theme={activeTheme}>
+				<GlobalStyle />
 				<StyledLayout>
 					<Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 					<StyledPageContent>
