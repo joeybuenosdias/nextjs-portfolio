@@ -57,6 +57,12 @@ export default function App({ Component, pageProps }) {
 			<GoogleFonts href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" />
 			<Head>
 				<title>Joey Schrader Dev</title>
+				<link rel="manifest" crossOrigin="use-credentials" href="/manifest.json" />
+				<link rel="icon" href="/beach16.png" sizes="16x16" />
+				<link rel="icon" href="/beach48.png" sizes="48x48" />
+				<link rel="icon" href="/beach128.png" sizes="128x128" />
+				<link rel="icon" href="/beach192.png" sizes="192x192" />
+				<link rel="icon" href="/beach512.png" sizes="512x512" />
 			</Head>
 			<GlobalStyle />
 			<ThemeProvider theme={activeTheme}>
