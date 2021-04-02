@@ -29,4 +29,8 @@ export const StyledText = styled.div`
 	background: ${({ theme }) => theme.gradient};
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
+	@media (max-width: 414px) {
+		font-size: var(--font-size-sm);
+	}
 `
