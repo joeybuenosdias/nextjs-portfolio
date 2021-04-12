@@ -1,12 +1,11 @@
-import PropTypes from 'prop-types'
 import Image from 'next/image'
 import { StyledName, StyledTitle, Container } from './home.styled'
 
-export default function Home({ name, title }) {
+export default function Home() {
 	return (
 		<Container>
-			<StyledName>{name}</StyledName>
-			<StyledTitle>{title}</StyledTitle>
+			<StyledName>JOEY SCHRADER</StyledName>
+			<StyledTitle>FRONT END ENGINEER</StyledTitle>
 			<Image
 				alt="Beach sunset with palm trees"
 				src="/beach.svg"
@@ -15,9 +14,4 @@ export default function Home({ name, title }) {
 			/>
 		</Container>
 	)
-}
-
-Home.propTypes = {
-	name: PropTypes.string.isRequired,
-	title: PropTypes.string.isRequired,
 }
